@@ -1,0 +1,100 @@
+<!-- 
+    INSTALLATION INSTRUCTIONS:
+    
+    1) Copy the contents of this file into a custom module (excluding these instructions).
+    2) Create fields for 5 tabs, each with a label and content. Make sure the machine names
+        match exactly what is used below.
+    3) Copy the contents of the CSS and JS files into already existing files, or create new ones
+        for them and include them in your template.
+    4) Insert this module into your template.
+    5) Voila!
+-->
+
+<div class="tabs-container hide-on-med-and-down">
+    <div class="tab-labels">
+        {% if widget.tab_1_label %}
+        <div tab-pos="1" class="tab-label active">
+            {{ widget.tab_1_label }}
+        </div>
+        {% endif %}
+        {% if widget.tab_2_label %}
+        <div tab-pos="2" class="tab-label">
+            {{ widget.tab_2_label }}
+        </div>
+        {% endif %}
+        {% if widget.tab_3_label %}
+        <div tab-pos="3" class="tab-label">
+            {{ widget.tab_3_label }}
+        </div>
+        {% endif %}
+        {% if widget.tab_4_label %}
+        <div tab-pos="4" class="tab-label">
+            {{ widget.tab_4_label }}
+        </div>
+        {% endif %}
+        {% if widget.tab_5_label %}
+        <div tab-pos="5" class="tab-label">
+            {{ widget.tab_5_label }}
+        </div>
+        {% endif %}
+    </div>
+    <div class="tab">
+        {% if widget.tab_1_content %}
+        <div tab-pos="1" class="tab-content active">
+            {{ widget.tab_1_content }}
+        </div>
+        {% endif %}
+        {% if widget.tab_2_content %}
+        <div tab-pos="2" class="tab-content">
+            {{ widget.tab_2_content }}
+        </div>
+        {% endif %}
+        {% if widget.tab_3_content %}
+        <div tab-pos="3" class="tab-content">
+            {{ widget.tab_3_content }}
+        </div>
+        {% endif %}
+        {% if widget.tab_4_content %}
+        <div tab-pos="4" class="tab-content">
+            {{ widget.tab_4_content }}
+        </div>
+        {% endif %}
+        {% if widget.tab_5_content %}
+        <div tab-pos="5" class="tab-content">
+            {{ widget.tab_5_content }}
+        </div>
+        {% endif %}
+    </div>
+</div>
+<ul class="tabs-collapsible collapsible hide-on-large-only" data-collapsible="accordion">
+    {% if widget.tab_1_label %}
+    <li>
+      <div class="collapsible-header">{{ widget.tab_1_label }}</div>
+      <div class="collapsible-body">{{ widget.tab_1_content }}</div>
+    </li>
+    {% endif %}
+    {% if widget.tab_2_label %}
+    <li>
+      <div class="collapsible-header">{{ widget.tab_2_label }}</div>
+      <div class="collapsible-body">{{ widget.tab_2_content }}</div>
+    </li>
+    {% endif %}
+    {% if widget.tab_3_label %}
+    <li>
+      <div class="collapsible-header">{{ widget.tab_3_label }}</div>
+      <div class="collapsible-body">{{ widget.tab_3_content }}</div>
+    </li>
+    {% endif %}
+    {% if widget.tab_4_label %}
+    <li>
+      <div class="collapsible-header">{{ widget.tab_4_label }}</div>
+      <div class="collapsible-body">{{ widget.tab_4_content }}</div>
+    </li>
+    {% endif %}
+    {% if widget.tab_5_label %}
+    <li>
+      <div class="collapsible-header">{{ widget.tab_5_label }}</div>
+      <div class="collapsible-body">{{ widget.tab_5_content }}</div>
+    </li>
+    {% endif %}
+</ul>
