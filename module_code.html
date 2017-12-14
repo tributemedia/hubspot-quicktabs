@@ -9,7 +9,7 @@
     4) Insert this module into your template.
     5) Voila!
 -->
-
+{% if widget.tab_1_label %}
 <div class="tabs-container hide-on-med-and-down">
     <div class="tab-labels">
         {% if widget.tab_1_label %}
@@ -98,3 +98,4 @@
     </li>
     {% endif %}
 </ul>
+{% endif %}
